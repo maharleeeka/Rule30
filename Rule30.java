@@ -1,15 +1,16 @@
 import java.util.*;
 class Rule30{
 
-	static int length = 20;
+	static int length;
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 
 		System.out.print("enter height: ");
 		int height = scan.nextInt();
 
-		System.out.print("enter initial state (must be 20): ");
+		System.out.print("enter initial state: ");
 		String init = scan.next();
+		length = init.length();
 
 		char[][] output = rule30(init,height);
 		display(output,height);	
